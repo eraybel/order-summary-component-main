@@ -1,0 +1,130 @@
+:root {
+  /* COLORS */
+  --Paleblue: hsl(225, 100%, 94%);
+  --Brightblue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  background-color: var(--Paleblue);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.bg__image {
+  background: url(/images/pattern-background-mobile.svg) no-repeat center/cover;
+  height: 480px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.container img.hero {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.container {
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 14px 19px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.content {
+  padding: 0 50px;
+}
+.content h2 {
+  margin: 20px 0;
+  color: var(--Dark-blue);
+  font-weight: 900;
+}
+.content p {
+  margin: 20px 0;
+  color: var(--Desaturated-blue);
+}
+.plan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 40px 0 40px 0;
+  background-color: var(--Very-pale-blue);
+  width: 100%;
+}
+
+.plan a {
+  display: inline-block;
+  width: 30%;
+  text-align: end;
+  color: var(--Brightblue);
+  opacity: 5;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.plan a:hover {
+  text-decoration: none;
+  opacity: 80%;
+}
+
+.plan article h4 {
+  color: var(--Dark-blue);
+  font-weight: 900;
+}
+.plan article p {
+  color: var(--Desaturated-blue);
+  font-weight: 500;
+}
+.btn {
+  padding: 15px;
+  width: 70%;
+  border: none;
+  border-radius: 10px;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.primary-button {
+  margin-bottom: 20px;
+  background-color: var(--Brightblue);
+  color: var(--Very-pale-blue);
+  box-shadow: 0px 23px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.primary-button:hover {
+  opacity: 80%;
+}
+
+.secondary-button {
+  margin-bottom: 40px;
+  color: var(--Desaturated-blue);
+  background-color: #fff;
+}
+
+.secondary-button:hover {
+  color: var(--Dark-blue);
+}
+@media (min-width: 768px) {
+  .bg-image {
+    background: url(/images/pattern-background-desktop.svg) no-repeat
+      center/cover;
+    height: 50vh;
+  }
+
+  .container {
+    max-width: 500px;
+  }
+}
